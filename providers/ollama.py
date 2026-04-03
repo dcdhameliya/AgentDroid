@@ -1,6 +1,6 @@
 import ollama
 from typing import List, Dict, Any, Optional
-from agentdroid.providers.base import BaseProvider, Message, ProviderResponse, ToolCall
+from providers.base import BaseProvider, Message, ProviderResponse, ToolCall
 
 class OllamaProvider(BaseProvider):
     def __init__(self, model_name: str = "llama3"):

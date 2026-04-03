@@ -3,19 +3,19 @@ import os
 from typing import List, Optional
 
 # Add vendor/claw_code to sys.path
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-CLAW_CODE_PATH = os.path.join(BASE_DIR, "vendor", "claw_code")
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CLAW_CODE_PATH = os.path.join(ROOT_DIR, "vendor", "claw_code")
 sys.path.append(CLAW_CODE_PATH)
 
 from src.runtime import PortRuntime
-from agentdroid.android.device import ADBDevice
-from agentdroid.agent.runtime import AgentRuntime
-from agentdroid.providers.gemini import GeminiProvider
-from agentdroid.tools.android_tools import (
+from android.device import ADBDevice
+from agent.runtime import AgentRuntime
+from providers.gemini import GeminiProvider
+from tools.android_tools import (
     TapTool, SwipeTool, InputTextTool, ScreenshotTool, UIDumpTool, LaunchAppTool
 )
 
-from agentdroid.providers.base import BaseProvider
+from providers.base import BaseProvider
 
 class ClawAgent:
     def __init__(self, device: ADBDevice, provider: Optional[BaseProvider] = None):

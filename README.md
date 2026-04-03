@@ -123,13 +123,44 @@ qwen extension add https://github.com/dcdhameliya/AgentDroid
 
 ---
 
+## 🤖 AI CLI Integrations (Manual Config)
+
+### Claude Code (MCP)
+Add AgentDroid as an MCP server in `~/Library/Application Support/claude/config.json`:
+```json
+{
+  "mcpServers": {
+    "agentdroid": {
+      "command": "/absolute/path/to/AgentDroid/.venv/bin/python3",
+      "args": ["-m", "mcp.server"],
+      "env": { "PYTHONPATH": "/absolute/path/to/AgentDroid" }
+    }
+  }
+}
+```
+
+### Oh-My-Codex (OMX)
+To add AgentDroid skills to OMX manually:
+```bash
+cp integrations/omx/skills.json ~/.omx/skills/agentdroid.json
+```
+
+### Oh-My-OpenAgent (OmO / OpenCode)
+Register the AgentDroid plugin in your `opencode.json` manually:
+```bash
+cp integrations/omo/plugin.py path/to/omo/plugins/agentdroid.py
+```
+
+---
+
 ## 📂 Project Structure
-- `agentdroid/cli/`: Main entry point.
-- `agentdroid/integrations/`: Manifests and plugins for AI CLIs (OMX, OmO, MCP).
-- `agentdroid/agent/`: Autonomous runtime, self-healing, and vision logic.
-- `agentdroid/android/`: ADB wrappers and manifest analysis.
-- `agentdroid/mcp/`: Claude-compatible MCP server.
-- `agentdroid/tools/`: Script writers, recorders, and teleportation tools.
+- `cli/`: Main entry point.
+- `integrations/`: Manifests and plugins for AI CLIs (OMX, OmO, MCP).
+- `agent/`: Autonomous runtime, self-healing, and vision logic.
+- `android/`: ADB wrappers and manifest analysis.
+- `mcp/`: Claude-compatible MCP server.
+- `tools/`: Script writers, recorders, and teleportation tools.
+- `vendor/`: Integrated libraries (including Claw-Code).
 
 ## 📄 License
 

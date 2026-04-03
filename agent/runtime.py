@@ -1,9 +1,9 @@
 import os
 import base64
 from typing import List, Dict, Any, Optional
-from agentdroid.providers.base import BaseProvider, Message, ToolCall
-from agentdroid.tools.base import BaseTool, ToolResult
-from agentdroid.android.device import ADBDevice
+from providers.base import BaseProvider, Message, ToolCall
+from tools.base import BaseTool, ToolResult
+from android.device import ADBDevice
 
 class AgentRuntime:
     def __init__(self, provider: BaseProvider, tools: List[BaseTool], device: ADBDevice):

@@ -6,10 +6,10 @@ from mcp.server.models import InitializationOptions
 from mcp.server import NotificationOptions, Server
 from mcp.server.stdio import stdio_server
 import mcp.types as types
-from agentdroid.android.device import list_devices
-from agentdroid.tools.recorder import ActionRecorder, replay_skill
-from agentdroid.tools.teleport import TeleportTool
-from agentdroid.android.manifest import get_deep_links
+from android.device import list_devices
+from tools.recorder import ActionRecorder, replay_skill
+from tools.teleport import TeleportTool
+from android.manifest import get_deep_links
 
 server = Server("agentdroid")
 

@@ -1,4 +1,4 @@
-from agentdroid.tools.base import AndroidTool, ToolResult
+from tools.base import AndroidTool, ToolResult
 import subprocess
 
 class TeleportTool(AndroidTool):

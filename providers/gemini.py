@@ -2,7 +2,7 @@ import google.generativeai as genai
 from typing import List, Dict, Any, Optional
 import os
 from PIL import Image
-from agentdroid.providers.base import BaseProvider, Message, ProviderResponse, ToolCall
+from providers.base import BaseProvider, Message, ProviderResponse, ToolCall
 
 class GeminiProvider(BaseProvider):
     def __init__(self, model_name: str = "gemini-2.0-flash", api_key: Optional[str] = None):

@@ -2,7 +2,7 @@ import subprocess
 import json
 import re
 from typing import List, Dict, Any, Optional
-from agentdroid.providers.base import BaseProvider, Message, ProviderResponse, ToolCall
+from providers.base import BaseProvider, Message, ProviderResponse, ToolCall
 
 class CLIProvider(BaseProvider):
     """

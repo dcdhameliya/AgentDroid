@@ -1,18 +1,18 @@
 import click
 import asyncio
-from agentdroid.android.device import list_devices, ADBDevice
-from agentdroid.providers.gemini import GeminiProvider
-from agentdroid.providers.ollama import OllamaProvider
-from agentdroid.providers.cli_provider import CLIProvider
-from agentdroid.agent.runtime import AgentRuntime
-from agentdroid.tools.android_tools import (
+from android.device import list_devices, ADBDevice
+from providers.gemini import GeminiProvider
+from providers.ollama import OllamaProvider
+from providers.cli_provider import CLIProvider
+from agent.runtime import AgentRuntime
+from tools.android_tools import (
     TapTool, SwipeTool, InputTextTool, ScreenshotTool, UIDumpTool, LaunchAppTool
 )
-from agentdroid.agent.claw_agent import ClawAgent
-from agentdroid.tools.recorder import ActionRecorder, replay_skill
-from agentdroid.tools.teleport import TeleportTool
-from agentdroid.tools.script_writer import generate_appium_script
-from agentdroid.agent.self_healing import SelfHealingAgent
+from agent.claw_agent import ClawAgent
+from tools.recorder import ActionRecorder, replay_skill
+from tools.teleport import TeleportTool
+from tools.script_writer import generate_appium_script
+from agent.self_healing import SelfHealingAgent
 
 @click.group()
 @click.option('--serial', help='Target a specific device by its serial number.')

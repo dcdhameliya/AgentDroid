@@ -1,8 +1,8 @@
 import subprocess
 import os
 from typing import Optional, Dict, Any
-from agentdroid.providers.base import BaseProvider, Message
-from agentdroid.android.device import ADBDevice
+from providers.base import BaseProvider, Message
+from android.device import ADBDevice
 
 class SelfHealingAgent:
     def __init__(self, provider: BaseProvider, device: ADBDevice):
