@@ -1,0 +1,44 @@
+{
+  "skills": [
+    {
+      "name": "android_list_devices",
+      "description": "List connected Android devices",
+      "command": "agentdroid devices"
+    },
+    {
+      "name": "android_screenshot",
+      "description": "Capture a screenshot from the Android device",
+      "command": "agentdroid screenshot --output {{output_path|default('screenshot.png')}}"
+    },
+    {
+      "name": "android_dump_ui",
+      "description": "Dump the UI hierarchy XML",
+      "command": "agentdroid dump-ui --output {{output_path|default('ui_dump.xml')}}"
+    },
+    {
+      "name": "android_tap",
+      "description": "Tap at coordinates (x, y)",
+      "command": "agentdroid tap {{x}} {{y}}"
+    },
+    {
+      "name": "android_swipe",
+      "description": "Swipe from (x1, y1) to (x2, y2)",
+      "command": "agentdroid swipe {{x1}} {{y1}} {{x2}} {{y2}} --duration {{duration|default(300)}}"
+    },
+    {
+      "name": "android_input",
+      "description": "Input text on the device",
+      "command": "agentdroid input \"{{text}}\""
+    },
+    {
+      "name": "android_launch",
+      "description": "Launch an app by package name",
+      "command": "agentdroid launch {{package_name}}"
+    },
+    {
+      "name": "android_teleport",
+      "description": "Jump to a deep link URL",
+      "command": "agentdroid run \"teleport to {{url}}\""
+    }
+  ]
+}

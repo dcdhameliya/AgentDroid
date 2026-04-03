@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "agentdroid"
+version = "0.1.0"
+description = "AgentDroid is an open-source AI agent framework for Android automation, testing, and debugging."
+authors = ["dcdhameliya"]
+readme = "README.md"
+packages = [{include = "agentdroid"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+click = "^8.1.7"
+pydantic = "^2.6.0"
+google-generativeai = "^0.8.0"
+python-dotenv = "^1.0.1"
+ollama = "^0.4.0"
+mcp = "^1.2.1"
+Pillow = "^10.2.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+
+[tool.poetry.scripts]
+agentdroid = "agentdroid.cli.main:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
