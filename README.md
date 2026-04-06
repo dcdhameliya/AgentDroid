@@ -12,14 +12,14 @@ It transforms your computer into an AI-powered control center for Android, suppo
 
 AgentDroid is designed to handle the most tedious parts of Android development and QA. Here is how it can supercharge your project:
 
-- **Multi-Model Intelligence**: Native support for **Gemini 2.0**, **Ollama (local)**, and various AI CLIs (**Claude, Codex, Qwen, OpenCode**). You aren't locked into one model; use the best "brain" for your specific task.
+- **Multi-Model Intelligence**: Native support for **Gemini 2.0**, **Ollama (local)**, and various AI CLIs (**Codex, Qwen, OpenCode**). You aren't locked into one model; use the best "brain" for your specific task.
 - **Vision-Based Reasoning**: Most automation tools fail on "flat" UI hierarchies (like Flutter, Compose, or Games). AgentDroid captures and analyzes real-time **screenshots** using Computer Vision, allowing it to "see" icons, images, and custom elements that have no XML text labels.
 - **The Script-Writer (Appium Code Gen)**: Transform AI-driven exploration into permanent code. Once the agent successfully completes a task, it can export the entire flow as a production-ready **Appium Python script**. This allows you to use AI for discovery and standard code for your CI/CD pipeline.
 - **Deep-Link Teleportation**: Stop wasting tokens and time clicking through 10 screens. AgentDroid automatically scans your app's manifest via `dumpsys` to discover hidden **Intent Filters** and **Deep Links**, allowing it to "teleport" instantly to specific Activities.
 - **Self-Healing Tests**: End the "broken test" nightmare. If an existing test script fails due to a UI change (like a renamed ID), the AgentDroid **Healing Agent** runs the script, captures the crash, analyzes the visual state, and proposes the exact code fix to restore your test suite.
 - **Layout Inspector & Mirroring**: Deep-dive into UI bugs with a single command. It toggles "Show Layout Bounds" on the physical device and launches a high-performance `scrcpy` mirror, giving engineers a "skeleton view" of the app layout on their desktop.
 - **Action Recorder**: Record complex manual sequences on a physical device and save them as reusable **AI Skills**. You can "show" the agent how to perform a corporate login flow once, and it will remember how to do it forever.
-- **MCP Native**: Fully compatible with the **Model Context Protocol**, turning your Android phone into a set of native tools inside **Claude Code**.
+- **MCP Native**: Fully compatible with the **Model Context Protocol**, turning your Android phone into a set of native tools inside **Claude Code**, **Gemini**, and **Codex**.
 
 ---
 
@@ -34,33 +34,33 @@ AgentDroid is engineered for professional environments where time is the most ex
 
 ---
 
-## 📥 Direct GitHub Installation
+## 📥 Direct Installation
 
-You can install AgentDroid tools directly into your favorite AI environment with a single command.
+You can install AgentDroid tools directly into your favorite AI environment.
 
-### 1. Gemini CLI
+### 1. Gemini CLI (Native Extension)
 ```bash
 gemini extension install https://github.com/dcdhameliya/AgentDroid
 ```
 
-### 2. Claude Code (MCP)
+### 2. OpenAI Codex CLI (Native Plugin)
+```bash
+codex /plugins install https://github.com/dcdhameliya/AgentDroid
+```
+
+### 3. Qwen CLI (Native Extension)
+```bash
+qwen extension add https://github.com/dcdhameliya/AgentDroid -y
+```
+
+### 4. Oh-My-OpenAgent (OpenCode CLI)
+```bash
+opencode plugin https://github.com/dcdhameliya/AgentDroid
+```
+
+### 5. Claude Code (MCP)
 Ask Claude:
 `"Install the MCP server from https://github.com/dcdhameliya/AgentDroid"`
-
-### 3. Oh-My-Codex (OMX / Codex CLI)
-```bash
-omx skill install https://github.com/dcdhameliya/AgentDroid
-```
-
-### 4. Oh-My-OpenAgent (OmO / OpenCode CLI)
-```bash
-omo plugin add https://github.com/dcdhameliya/AgentDroid
-```
-
-### 5. Qwen CLI
-```bash
-qwen extension add https://github.com/dcdhameliya/AgentDroid
-```
 
 ---
 
@@ -123,42 +123,12 @@ qwen extension add https://github.com/dcdhameliya/AgentDroid
 
 ---
 
-## 🤖 AI CLI Integrations (Manual Config)
-
-### Claude Code (MCP)
-Add AgentDroid as an MCP server in `~/Library/Application Support/claude/config.json`:
-```json
-{
-  "mcpServers": {
-    "agentdroid": {
-      "command": "/absolute/path/to/AgentDroid/.venv/bin/python3",
-      "args": ["-m", "mcp.server"],
-      "env": { "PYTHONPATH": "/absolute/path/to/AgentDroid" }
-    }
-  }
-}
-```
-
-### Oh-My-Codex (OMX)
-To add AgentDroid skills to OMX manually:
-```bash
-cp integrations/omx/skills.json ~/.omx/skills/agentdroid.json
-```
-
-### Oh-My-OpenAgent (OmO / OpenCode)
-Register the AgentDroid plugin in your `opencode.json` manually:
-```bash
-cp integrations/omo/plugin.py path/to/omo/plugins/agentdroid.py
-```
-
----
-
 ## 📂 Project Structure
 - `cli/`: Main entry point.
-- `integrations/`: Manifests and plugins for AI CLIs (OMX, OmO, MCP).
+- `integrations/`: Manifests and plugins for AI CLIs (Codex, OmO, MCP).
 - `agent/`: Autonomous runtime, self-healing, and vision logic.
 - `android/`: ADB wrappers and manifest analysis.
-- `mcp/`: Claude-compatible MCP server.
+- `mcp/`: Claude/Gemini-compatible MCP server.
 - `tools/`: Script writers, recorders, and teleportation tools.
 - `vendor/`: Integrated libraries (including Claw-Code).
 

@@ -1,0 +1,3 @@
+name = "screenshot"
+description = "Capture a screenshot from the current Android device."
+command = "python3 -m cli.main screenshot --output screenshot.png"

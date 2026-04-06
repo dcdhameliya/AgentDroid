@@ -1,0 +1,30 @@
+{
+  "name": "@dcdhameliya/agentdroid",
+  "version": "0.1.1",
+  "description": "Android-first AI agent framework for automation, testing, and debugging.",
+  "main": "integrations/omo/plugin.py",
+  "files": [
+    "agent/",
+    "android/",
+    "cli/",
+    "integrations/",
+    "mcp/",
+    "providers/",
+    "tools/",
+    "vendor/",
+    "gemini-extension.json",
+    "GEMINI.md",
+    "pyproject.toml",
+    "README.md"
+  ],
+  "keywords": [
+    "android",
+    "automation",
+    "testing",
+    "ai",
+    "mcp",
+    "agent"
+  ],
+  "author": "dcdhameliya",
+  "license": "GPL-3.0"
+}

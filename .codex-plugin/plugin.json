@@ -1,0 +1,14 @@
+{
+  "name": "agentdroid",
+  "version": "0.1.0",
+  "description": "Android-first AI agent framework for automation, testing, and debugging.",
+  "author": "dcdhameliya",
+  "homepage": "https://github.com/dcdhameliya/AgentDroid",
+  "license": "GPL-3.0",
+  "components": {
+    "skills": [
+      "./integrations/omx/skills.json"
+    ],
+    "mcp_servers": "./.mcp.json"
+  }
+}

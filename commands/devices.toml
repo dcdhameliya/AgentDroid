@@ -1,0 +1,3 @@
+name = "devices"
+description = "List connected Android devices."
+command = "python3 -m cli.main devices"
