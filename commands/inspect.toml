@@ -1,4 +1,2 @@
-name = "inspect"
+prompt = "!{python3 -m cli.main inspect}"
 description = "Enable layout bounds and mirror screen for UI inspection."
-command = "python3 -m cli.main inspect"
-is_interactive = true

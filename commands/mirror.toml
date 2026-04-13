@@ -1,4 +1,2 @@
-name = "mirror"
+prompt = "!{python3 -m cli.main mirror}"
 description = "Mirror the device screen to your computer using scrcpy."
-command = "python3 -m cli.main mirror"
-is_background = true
