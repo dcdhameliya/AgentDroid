@@ -1,0 +1,1 @@
+"""AgentDroid MCP server package."""

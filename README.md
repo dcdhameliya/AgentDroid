@@ -34,18 +34,24 @@ AgentDroid is engineered for professional environments where time is the most ex
 
 ---
 
-## 📥 Direct Installation
+## 📥 Installation
 
-You can install AgentDroid tools directly into your favorite AI environment.
+You can install AgentDroid tools into your favorite AI environment.
 
 ### 1. Gemini CLI (Native Extension)
 ```bash
 gemini extension install https://github.com/dcdhameliya/AgentDroid
 ```
 
-### 2. OpenAI Codex CLI (Native Plugin)
+### 2. OpenAI Codex CLI (MCP)
+Codex does not use the old `/plugins install` command. Register AgentDroid as an MCP server from a local checkout:
 ```bash
-codex /plugins install https://github.com/dcdhameliya/AgentDroid
+git clone https://github.com/dcdhameliya/AgentDroid
+cd AgentDroid
+python3 -m venv .venv
+.venv/bin/pip install -e .
+codex mcp add agentdroid --env PYTHONPATH="$(pwd)" -- "$(pwd)/.venv/bin/python" -m agentdroid_mcp.server
+codex mcp get agentdroid
 ```
 
 ### 3. Qwen CLI (Native Extension)

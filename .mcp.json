@@ -2,7 +2,7 @@
   "mcpServers": {
     "agentdroid": {
       "command": "python3",
-      "args": ["-m", "mcp.server"],
+      "args": ["-m", "agentdroid_mcp.server"],
       "env": {
         "PYTHONPATH": "."
       }

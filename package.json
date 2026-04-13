@@ -8,6 +8,7 @@
     "android/",
     "cli/",
     "integrations/",
+    "agentdroid_mcp/",
     "mcp/",
     "providers/",
     "tools/",

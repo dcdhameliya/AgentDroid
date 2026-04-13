@@ -4,6 +4,14 @@ version = "0.1.2"
 description = "AgentDroid is an open-source AI agent framework for Android automation, testing, and debugging."
 authors = ["dcdhameliya"]
 readme = "README.md"
+packages = [
+    { include = "agent" },
+    { include = "agentdroid_mcp" },
+    { include = "android" },
+    { include = "cli" },
+    { include = "providers" },
+    { include = "tools" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
